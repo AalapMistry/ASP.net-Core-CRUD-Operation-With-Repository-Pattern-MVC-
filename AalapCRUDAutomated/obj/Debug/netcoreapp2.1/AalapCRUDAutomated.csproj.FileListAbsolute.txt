@@ -64,7 +64,6 @@ E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operatio
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Privacy.g.cshtml.cs
-E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Createregistration.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_ValidationScriptsPartial.g.cshtml.cs
@@ -76,3 +75,8 @@ E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operatio
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\AalapCRUDAutomated.csproj.CopyComplete
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\AalapCRUDAutomated.dll
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\AalapCRUDAutomated.pdb
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Create_registration.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Index.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Delete_registration.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Edit_registration.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Pages\Registration\Registration_Details.g.cshtml.cs

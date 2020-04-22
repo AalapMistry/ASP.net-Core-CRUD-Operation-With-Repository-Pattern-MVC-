@@ -9,7 +9,7 @@ namespace Service.Registration
     {
         private IRegistrationRepo IRegistrationrepo;
 
-        private RegistrationService(IRegistrationRepo IRegistrationre)
+        public RegistrationService(IRegistrationRepo IRegistrationre)
         {
             IRegistrationrepo = IRegistrationre;
         }
