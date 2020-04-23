@@ -11,18 +11,18 @@ namespace AalapCRUDAutomated.Controllers
     public class RegistrationController : Controller
     {
 
-        private IRegistrationService iregistrationService;
+        public IRegistrationService _iregistrationService;
 
         public RegistrationController(IRegistrationService iRegistrationService)
         {
-            iregistrationService = iRegistrationService;
+            _iregistrationService = iRegistrationService;
         }
         // GET: Registration
         [HttpGet("[action]")]
         public ActionResult Index()
         {
             List<RegistrationModel> RegistrationList = new List<RegistrationModel>();
-            RegistrationList = iregistrationService.GetAllRegistrations().ToList();
+            RegistrationList = _iregistrationService.GetAllRegistrations().ToList();
             return View(RegistrationList);
         }
 
@@ -34,7 +34,7 @@ namespace AalapCRUDAutomated.Controllers
             {
                 return NotFound();
             }
-            RegistrationModel Registration = iregistrationService.GetRegistrationData(id);
+            RegistrationModel Registration = _iregistrationService.GetRegistrationData(id);
 
             if (Registration == null)
             {
@@ -53,7 +53,6 @@ namespace AalapCRUDAutomated.Controllers
         // POST: Registration/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [HttpGet("[action]")]
         public ActionResult Create([Bind] RegistrationModel Registration)
         {
             try
@@ -61,10 +60,10 @@ namespace AalapCRUDAutomated.Controllers
                 // TODO: Add insert logic here
                 if (ModelState.IsValid)
                 {
-                    iregistrationService.AddRegistration(Registration);
+                    _iregistrationService.AddRegistration(Registration);
                     return RedirectToAction("Index", "Registration");
                 }
-                return View(iregistrationService);
+                return View(_iregistrationService);
             }
             catch
             {
@@ -80,7 +79,7 @@ namespace AalapCRUDAutomated.Controllers
             {
                 return NotFound();
             }
-            RegistrationModel registration = iregistrationService.GetRegistrationData(id);
+            RegistrationModel registration = _iregistrationService.GetRegistrationData(id);
 
             if (registration == null)
             {
@@ -92,7 +91,6 @@ namespace AalapCRUDAutomated.Controllers
         // POST: Registration/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [HttpGet("[action]")]
         public ActionResult Edit(int id, RegistrationModel Registration)
         {
             if (id != Registration.ID)
@@ -101,10 +99,10 @@ namespace AalapCRUDAutomated.Controllers
             }
             if (ModelState.IsValid)
             {
-                iregistrationService.UpdateRegistration(Registration);
+                _iregistrationService.UpdateRegistration(Registration);
                 return RedirectToAction("Index");
             }
-            return View(iregistrationService);
+            return View(_iregistrationService);
 
         }
 
@@ -116,7 +114,7 @@ namespace AalapCRUDAutomated.Controllers
             {
                 return NotFound();
             }
-            RegistrationModel registration = iregistrationService.GetRegistrationData(id);
+            RegistrationModel registration = _iregistrationService.GetRegistrationData(id);
 
             if (registration == null)
             {
@@ -128,13 +126,12 @@ namespace AalapCRUDAutomated.Controllers
         // POST: Registration/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [HttpGet("[action]")]
         public ActionResult Delete(int id, RegistrationModel Registration)
         {
             try
             {
                 // TODO: Add delete logic here
-                iregistrationService.DeleteRegistration(id);
+                _iregistrationService.DeleteRegistration(id);
                 return RedirectToAction("Index");
             }
             catch

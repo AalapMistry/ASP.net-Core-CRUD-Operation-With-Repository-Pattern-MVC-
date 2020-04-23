@@ -7,7 +7,7 @@ namespace Service.Registration
 {
     public class RegistrationService : IRegistrationService
     {
-        private IRegistrationRepo IRegistrationrepo;
+        private readonly IRegistrationRepo IRegistrationrepo;
 
         public RegistrationService(IRegistrationRepo IRegistrationre)
         {
