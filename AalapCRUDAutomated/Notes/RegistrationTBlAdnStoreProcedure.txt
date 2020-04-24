@@ -1,0 +1,145 @@
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[tblRegistration]    Script Date: 24/04/2020 3:48:20 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblRegistration](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](20) NOT NULL,
+	[lastName] [varchar](20) NOT NULL,
+	[DOB] [datetime] NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[Email] [varchar](200) NOT NULL,
+	[Mobile] [varchar](10) NOT NULL,
+	[Country] [varchar](50) NOT NULL,
+	[State] [varchar](50) NOT NULL,
+	[City] [varchar](50) NOT NULL,
+	[Address] [varchar](20) NOT NULL
+) ON [PRIMARY]
+GO
+
+USE [TestDB]
+GO
+/****** Object:  StoredProcedure [dbo].[spAddRegistration]    Script Date: 24/04/2020 3:44:00 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[spAddRegistration]    
+(    
+    @FirstName VARCHAR(20),     
+    @lastName VARCHAR(20),    
+    @DOB datetime,    
+    @Gender VARCHAR(50),
+	@Email VARCHAR(100),
+	@Mobile VARCHAR(10),
+	@Country varchar(100),
+	@State varchar(100),
+	@City varchar(100),
+	@Address varchar(100)
+)    
+as     
+Begin     
+    Insert into tblRegistration (FirstName,lastName,DOB, Gender,Email,Mobile,Country,State,City,Address)     
+    Values (@FirstName,@lastName,@DOB, @Gender,@Email,@Mobile,@Country,@State,@City,@Address)     
+End
+
+USE [TestDB]
+GO
+/****** Object:  StoredProcedure [dbo].[spDeleteRegistration]    Script Date: 24/04/2020 3:44:15 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[spDeleteRegistration]  
+(      
+   @regId int      
+)      
+as       
+begin      
+   Delete from tblRegistration where id=@regId      
+End
+
+USE [TestDB]
+GO
+/****** Object:  StoredProcedure [dbo].[spGetAllRegistration]    Script Date: 24/04/2020 3:44:23 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[spGetAllRegistration]  
+as    
+Begin    
+    select *    
+    from tblRegistration   
+End
+
+USE [TestDB]
+GO
+/****** Object:  StoredProcedure [dbo].[spGetAllRegistrations]    Script Date: 24/04/2020 3:44:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[spGetAllRegistrations]      
+As      
+Begin      
+    select   
+       Id,	
+FirstName,	
+lastName,
+DOB,	
+Gender,	
+Email,	
+Mobile,	
+Country,	
+State,	
+City,	
+Address
+    from tblRegistration      
+End  
+
+
+USE [TestDB]
+GO
+/****** Object:  StoredProcedure [dbo].[spUpdateRegistration]    Script Date: 24/04/2020 3:44:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[spUpdateRegistration]      
+(      
+    @Id INTEGER ,    
+    @FirstName VARCHAR(20),     
+    @lastName VARCHAR(20),    
+    @DOB datetime,    
+    @Gender VARCHAR(50),
+	@Email VARCHAR(100),
+	@Mobile VARCHAR(10),
+	@Country varchar(100),
+	@State varchar(100),
+	@City varchar(100),
+	@Address varchar(100) 
+)      
+as      
+begin      
+   Update tblRegistration       
+   set 
+   FirstName=@FirstName, 
+   lastName=@lastName, 
+   DOB=@DOB, 
+   Gender=@Gender, 
+   Email=@Email, 
+   Mobile=@Mobile,      
+   Country=@Country,      
+   State=@State,
+   City=@City,
+   Address=@Address
+
+   where Id=@Id      
+End

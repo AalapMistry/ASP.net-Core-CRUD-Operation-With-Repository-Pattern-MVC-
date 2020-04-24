@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Models;
 using Service.Registration;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace AalapCRUDAutomated.Controllers
     {
 
         public IRegistrationService _iregistrationService;
+      
 
         public RegistrationController(IRegistrationService iRegistrationService)
         {

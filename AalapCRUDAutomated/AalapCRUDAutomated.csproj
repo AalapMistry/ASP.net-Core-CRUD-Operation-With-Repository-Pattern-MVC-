@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Notes\" />
     <Folder Include="Views\" />
   </ItemGroup>
 

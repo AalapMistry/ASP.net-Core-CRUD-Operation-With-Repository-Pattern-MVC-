@@ -23,6 +23,17 @@ namespace AalapCRUDAutomated
 
         public IConfiguration Configuration { get; }
 
+        public static string ConnectionString
+        {
+            get;
+            private set;
+        }
+
+        public Startup(IHostingEnvironment env)
+        {
+            Configuration = new ConfigurationBuilder().SetBasePath(env.ContentRootPath).AddJsonFile("appSettings.json").Build();
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -32,6 +43,7 @@ namespace AalapCRUDAutomated
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IRegistrationService, RegistrationService>();
@@ -51,6 +63,7 @@ namespace AalapCRUDAutomated
                 app.UseHsts();
             }
 
+            ConnectionString = Configuration["ConnectionStrings:DefaultConnection"];
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
