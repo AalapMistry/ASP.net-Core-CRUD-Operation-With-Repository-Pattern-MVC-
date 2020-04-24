@@ -9,7 +9,7 @@ namespace Repository.Registration
 {
     public class RegistrationRepo : IRegistrationRepo
     {
-        string connectionString = "Put Your Connection string here";
+        string connectionString = "data source=AALAP\\SQLEXPRESS;initial catalog = TestDB; persist security info=True; Integrated Security = SSPI;";
         //To View all Registrations details    
         public IList<RegistrationModel> GetAllRegistrations()
         {

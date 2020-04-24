@@ -28,7 +28,7 @@ namespace AalapCRUDAutomated.Controllers
 
         // GET: Registration/Details/5
         [HttpGet("[action]")]
-        public ActionResult Details(int? id)
+        public ActionResult Registration_Details(int? id)
         {
             if (id == null)
             {
@@ -45,15 +45,15 @@ namespace AalapCRUDAutomated.Controllers
 
         // GET: Registration/Create
         [HttpGet("[action]")]
-        public ActionResult Create()
+        public ActionResult Create_registration()
         {
             return View();
         }
 
         // POST: Registration/Create
-        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind] RegistrationModel Registration)
+        [HttpPost("[action]")]
+        public ActionResult Create_registration([Bind] RegistrationModel Registration)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace AalapCRUDAutomated.Controllers
 
         // GET: Registration/Edit/5
         [HttpGet("[action]")]
-        public ActionResult Edit(int? id)
+        public ActionResult Edit_registration(int? id)
         {
             if (id == null)
             {
@@ -89,9 +89,9 @@ namespace AalapCRUDAutomated.Controllers
         }
 
         // POST: Registration/Edit/5
-        [HttpPost]
+        [HttpPost("[action]")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, RegistrationModel Registration)
+        public ActionResult Edit_registration(int id, RegistrationModel Registration)
         {
             if (id != Registration.ID)
             {
@@ -108,7 +108,7 @@ namespace AalapCRUDAutomated.Controllers
 
         // GET: Registration/Delete/5
         [HttpGet("[action]")]
-        public ActionResult Delete(int? id)
+        public ActionResult Delete_registration(int? id)
         {
             if (id == null)
             {
@@ -124,9 +124,9 @@ namespace AalapCRUDAutomated.Controllers
         }
 
         // POST: Registration/Delete/5
-        [HttpPost]
+        [HttpPost("[action]")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, RegistrationModel Registration)
+        public ActionResult Delete_registration(int id, RegistrationModel Registration)
         {
             try
             {
