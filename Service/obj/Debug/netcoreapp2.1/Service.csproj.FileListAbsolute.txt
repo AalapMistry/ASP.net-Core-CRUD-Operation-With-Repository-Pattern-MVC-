@@ -34,3 +34,5 @@ E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operatio
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\Service\obj\Debug\netcoreapp2.1\Service.csproj.CopyComplete
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\Service\obj\Debug\netcoreapp2.1\Service.dll
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\Service\obj\Debug\netcoreapp2.1\Service.pdb
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\Service\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\Service\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.xml

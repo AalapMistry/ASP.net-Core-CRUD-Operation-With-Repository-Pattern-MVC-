@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Microsoft.Extensions.Configuration;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,12 +10,17 @@ namespace Repository.Registration
 {
     public class RegistrationRepo : IRegistrationRepo
     {
-        string connectionString = "data source=AALAP\\SQLEXPRESS;initial catalog = TestDB; persist security info=True; Integrated Security = SSPI;";
+        public static IConfiguration _ConnectionString;
+        public RegistrationRepo(IConfiguration Configuration)
+        {
+            _ConnectionString = Configuration;
+        }
+        
         //To View all Registrations details    
         public IList<RegistrationModel> GetAllRegistrations()
         {
             List<RegistrationModel> lstRegistration = new List<RegistrationModel>();
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
                 SqlCommand cmd = new SqlCommand("spGetAllRegistrations", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -43,7 +49,7 @@ namespace Repository.Registration
         //To Add new Registration record    
         public void AddRegistration(RegistrationModel Registration)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
                 SqlCommand cmd = new SqlCommand("spAddRegistration", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -65,7 +71,7 @@ namespace Repository.Registration
         //To Update the records of a particluar Registration  
         public void UpdateRegistration(RegistrationModel Registration)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
                 SqlCommand cmd = new SqlCommand("spUpdateRegistration", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -89,7 +95,7 @@ namespace Repository.Registration
         public RegistrationModel GetRegistrationData(int? id)
         {
             RegistrationModel Registration = new RegistrationModel();
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
                 string sqlQuery = "SELECT * FROM tblRegistration WHERE Id= " + id;
                 SqlCommand cmd = new SqlCommand(sqlQuery, con);
@@ -115,7 +121,7 @@ namespace Repository.Registration
         //To Delete the record on a particular Registration  
         public void DeleteRegistration(int? id)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
                 SqlCommand cmd = new SqlCommand("spDeleteRegistration", con);
                 cmd.CommandType = CommandType.StoredProcedure;
