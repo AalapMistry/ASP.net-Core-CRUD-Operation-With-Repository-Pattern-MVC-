@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AalapCRUDAutomated", "AalapCRUDAutomated\AalapCRUDAutomated.csproj", "{CACB41D7-A9C9-4325-BA0A-47A1928DC72A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AalapCRUDAutomated", "AalapCRUDAutomated\AalapCRUDAutomated.csproj", "{CACB41D7-A9C9-4325-BA0A-47A1928DC72A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{2526BACF-59C2-4DA3-9940-7C5B96AD7882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{2526BACF-59C2-4DA3-9940-7C5B96AD7882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{12A9FC40-168B-4136-9EDB-66C80B87A1F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{12A9FC40-168B-4136-9EDB-66C80B87A1F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{13F5C021-625D-4BE3-9544-408EE8B306B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{13F5C021-625D-4BE3-9544-408EE8B306B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

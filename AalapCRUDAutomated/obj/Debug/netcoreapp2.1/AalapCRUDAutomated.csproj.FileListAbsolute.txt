@@ -80,3 +80,8 @@ E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operatio
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Category\Create_category.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Category\Delete_category.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Category\Edit_category.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Category\Index.g.cshtml.cs
+E:\.Net Data\ASP.Net Core\ASP.net Core CRUD Operation\ASP.net-Core-CRUD-Operation-With-Repository-Pattern-MVC-\AalapCRUDAutomated\obj\Debug\netcoreapp2.1\Razor\Views\Category\Category_Details.g.cshtml.cs
