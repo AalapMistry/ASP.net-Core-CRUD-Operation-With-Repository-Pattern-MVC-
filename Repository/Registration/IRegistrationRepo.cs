@@ -2,20 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository.Registration
 {
     public interface IRegistrationRepo
     {
-        IList<RegistrationModel> GetAllRegistrations();
+        Task<IList<RegistrationModel>> GetAllRegistrations();
 
-        void AddRegistration(RegistrationModel Registration);
+        Task AddRegistration(RegistrationModel Registration);
 
-        void UpdateRegistration(RegistrationModel Registration);
+        Task UpdateRegistration(RegistrationModel Registration);
 
-        RegistrationModel GetRegistrationData(int? id);
+        Task<RegistrationModel> GetRegistrationData(int? id);
 
-        void DeleteRegistration(int? id);
+        Task DeleteRegistration(int? id);
 
     }
 }

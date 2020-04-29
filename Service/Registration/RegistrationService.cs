@@ -2,24 +2,25 @@
 using Repository.Registration;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Service.Registration
 {
     public class RegistrationService : IRegistrationService
     {
-        private readonly IRegistrationRepo IRegistrationrepo;
+        private readonly IRegistrationRepo _IRegistrationrepo;
 
         public RegistrationService(IRegistrationRepo IRegistrationre)
         {
-            IRegistrationrepo = IRegistrationre;
+            _IRegistrationrepo = IRegistrationre;
         }
         //To View all Registrations details    
-        public IList<RegistrationModel> GetAllRegistrations()
+        public async Task<IList<RegistrationModel>> GetAllRegistrations()
         {
             IList<RegistrationModel> list=new List<RegistrationModel>();
             try
             {
-                list= IRegistrationrepo.GetAllRegistrations();
+                list= await _IRegistrationrepo.GetAllRegistrations();
             }
             catch (Exception ex)
             {
@@ -28,11 +29,11 @@ namespace Service.Registration
             return list;
         }
         //To Add new Registration record    
-        public void AddRegistration(RegistrationModel Registration)
+        public async Task AddRegistration(RegistrationModel Registration)
         {
             try
             {
-                IRegistrationrepo.AddRegistration(Registration);
+                await _IRegistrationrepo.AddRegistration(Registration);
             }
             catch (Exception ex)
             {
@@ -41,11 +42,11 @@ namespace Service.Registration
             }
         }
         //To Update the records of a particluar Registration  
-        public void UpdateRegistration(RegistrationModel Registration)
+        public async Task UpdateRegistration(RegistrationModel Registration)
         {
             try
             {
-                IRegistrationrepo.UpdateRegistration(Registration);
+                await _IRegistrationrepo.UpdateRegistration(Registration);
             }
             catch (Exception ex)
             {
@@ -53,12 +54,12 @@ namespace Service.Registration
             }
         }
         //Get the details of a particular Registration  
-        public RegistrationModel GetRegistrationData(int? id)
+        public async Task<RegistrationModel> GetRegistrationData(int? id)
         {
             RegistrationModel objRegistration = new RegistrationModel();
             try
             {
-                objRegistration=IRegistrationrepo.GetRegistrationData(id);
+                objRegistration= await _IRegistrationrepo.GetRegistrationData(id);
             }
             catch (Exception ex)
             {
@@ -67,11 +68,11 @@ namespace Service.Registration
             return objRegistration;
         }
         //To Delete the record on a particular Registration  
-        public void DeleteRegistration(int? id)
+        public async Task DeleteRegistration(int? id)
         {
             try
             {
-                IRegistrationrepo.DeleteRegistration(id);
+                await _IRegistrationrepo.DeleteRegistration(id);
             }
             catch (Exception ex)
             {
