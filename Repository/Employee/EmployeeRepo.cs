@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Employee
 {
-    public class EmployeeRepo
+    public class EmployeeRepo : IEmployeeRepo
     {
 
         private readonly IConfiguration _ConnectionString;

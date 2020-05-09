@@ -57,11 +57,6 @@ namespace AalapCRUDAutomated
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
-            }
 
             ConnectionString = Configuration["ConnectionStrings:DefaultConnection"];
             app.UseHttpsRedirection();

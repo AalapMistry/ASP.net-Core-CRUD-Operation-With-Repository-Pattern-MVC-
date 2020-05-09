@@ -11,13 +11,13 @@ namespace AalapCRUDWebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [DisableCors]
-    public class EmployeeController : ControllerBase
+    public class EmployeeController : Controller
     {
         private readonly IEmployeeService _iemployeeService;
 
-        public EmployeeController(IEmployeeService IEmployeeService)
+        public EmployeeController(IEmployeeService iEmployeeService)
         {
-            _iemployeeService = IEmployeeService;
+            _iemployeeService = iEmployeeService;
         }
 
 

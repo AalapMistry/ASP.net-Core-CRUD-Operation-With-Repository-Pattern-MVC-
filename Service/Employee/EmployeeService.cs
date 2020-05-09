@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Service.Employee
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
-        private readonly IEmployeeRepo _IEmployeerepo;
+        private readonly IEmployeeRepo _iEmployeeRepo;
 
-        public EmployeeService(IEmployeeRepo IEmployeere)
+        public EmployeeService(IEmployeeRepo iemployeeRepo)
         {
-            _IEmployeerepo = IEmployeere;
+            _iEmployeeRepo = iemployeeRepo;
         }
         //To View all Employees details    
         public async Task<IList<EmployeeModel>> GetAllEmployees()
@@ -21,7 +21,7 @@ namespace Service.Employee
             IList<EmployeeModel> list = new List<EmployeeModel>();
             try
             {
-                list = await _IEmployeerepo.GetAllEmployees();
+                list = await _iEmployeeRepo.GetAllEmployees();
             }
             catch (Exception ex)
             {
@@ -34,7 +34,7 @@ namespace Service.Employee
         {
             try
             {
-                await _IEmployeerepo.AddEmployee(Employee);
+                await _iEmployeeRepo.AddEmployee(Employee);
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace Service.Employee
         {
             try
             {
-                await _IEmployeerepo.UpdateEmployee(Employee);
+                await _iEmployeeRepo.UpdateEmployee(Employee);
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace Service.Employee
             EmployeeModel objEmployee = new EmployeeModel();
             try
             {
-                objEmployee = await _IEmployeerepo.GetEmployeeData(id);
+                objEmployee = await _iEmployeeRepo.GetEmployeeData(id);
             }
             catch (Exception ex)
             {
@@ -73,7 +73,7 @@ namespace Service.Employee
         {
             try
             {
-                await _IEmployeerepo.DeleteEmployee(id);
+                await _iEmployeeRepo.DeleteEmployee(id);
             }
             catch (Exception ex)
             {
