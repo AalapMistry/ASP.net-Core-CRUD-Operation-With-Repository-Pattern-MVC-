@@ -25,7 +25,7 @@ namespace Repository.Employee
         {
             using (SqlConnection con = new SqlConnection(_ConnectionString.GetSection("ConnectionString").Value))
             {
-                string sQuery = "spGetAllEmployees";
+                string sQuery = "spGetAllEmployee";
                 DynamicParameters param = new DynamicParameters();
                 con.Open();
                 var result = await con.QueryAsync<EmployeeModel>(sQuery, param, commandType: CommandType.StoredProcedure);
