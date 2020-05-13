@@ -86,7 +86,7 @@ namespace Repository.Employee
             {
                 string sQuery = "spDeleteEmployee";
                 DynamicParameters param = new DynamicParameters();
-                param.Add("@regId", id);
+                param.Add("@Id", id);
                 con.Open();
                 await con.ExecuteAsync(sQuery, param, commandType: CommandType.StoredProcedure);
                 con.Close();
