@@ -12,7 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Repository.Employee;
+using Repository.Product;
 using Service.Employee;
+using Service.Product;
 
 namespace AalapCRUDWebAPI
 {
@@ -45,6 +47,8 @@ namespace AalapCRUDWebAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductRepo, ProductRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
